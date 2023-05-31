@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.akbank.core:core-package-v1:1.0.2-RELEASED">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/akbank/core/core-package-v1/1.0.2-RELEASED/core-package-v1-1.0.2-RELEASED.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/akbank/core/core-package-v1/1.0.2-RELEASED/core-package-v1-1.0.2-RELEASED-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/akbank/core/core-package-v1/1.0.2-RELEASED/core-package-v1-1.0.2-RELEASED-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
