@@ -1,11 +1,13 @@
 package com.akbank.userservice.exception.exceptions;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import com.akbank.userservice.exception.base.BaseException;
+import lombok.extern.slf4j.Slf4j;
 
-@ResponseStatus(HttpStatus.BAD_REQUEST)
-public class UserNotCreatedException extends RuntimeException{
+@Slf4j
+public class UserNotCreatedException extends BaseException {
+
     public UserNotCreatedException(String message) {
         super(message);
+        log.error("[UserNotCreatedException] -> message : {}", message);
     }
 }

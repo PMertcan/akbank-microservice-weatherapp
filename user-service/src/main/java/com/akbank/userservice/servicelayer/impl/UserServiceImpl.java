@@ -1,16 +1,22 @@
 package com.akbank.userservice.servicelayer.impl;
 
+import com.akbank.userservice.configuration.SecurityConfiguration;
 import com.akbank.userservice.dao.IUserRepository;
 import com.akbank.userservice.entity.User;
 import com.akbank.userservice.dto.request.UserCreateRequest;
 import com.akbank.userservice.dto.request.UserUpdateRequest;
 import com.akbank.userservice.dto.response.UserResponse;
+import com.akbank.userservice.exception.enums.UserExceptionTypes;
+import com.akbank.userservice.exception.exceptions.UserNotCreatedException;
+import com.akbank.userservice.exception.exceptions.UserNotDeletedException;
 import com.akbank.userservice.exception.exceptions.UserNotFoundException;
+import com.akbank.userservice.exception.exceptions.UserNotUpdatedException;
 import com.akbank.userservice.mapper.UserMapper;
 import com.akbank.userservice.servicelayer.UserEntityService;
 import com.akbank.userservice.servicelayer.service.IUserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
@@ -24,15 +30,16 @@ public class UserServiceImpl implements IUserService {
 
     private final IUserRepository userRepository;
 
+    private final PasswordEncoder passwordEncoder;
+
     @Override
     public List<UserResponse> getAllUsers() {
-
         List<User> userList = userEntityService.findAll();
 
         List<UserResponse> userResponse = UserMapper.MAP.entityListToDtoList(userList);
 
         if (!userResponse.isEmpty()) return userResponse;
-        else throw new RuntimeException("Hata");
+        else throw new UserNotFoundException(UserExceptionTypes.USERS_NOT_FOUND.getValue());
     }
 
     @Override
@@ -40,8 +47,9 @@ public class UserServiceImpl implements IUserService {
        Optional<User> user = userEntityService.findById(id);
 
        if (user.isPresent()) {
+           log.info("User Credentials : {}", user.get());
            return UserMapper.MAP.entityToDto(user.get());
-       } else throw new RuntimeException("User not found with id : " + id);
+       } else throw new UserNotFoundException(UserExceptionTypes.USER_NOT_FOUND_ID.getValue());
     }
 
     @Override
@@ -49,15 +57,22 @@ public class UserServiceImpl implements IUserService {
         Optional<User> user = userRepository.findUserByUserName(username);
 
         if (user.isPresent()) {
+            log.info("User Credentials : {}", user.get());
             return UserMapper.MAP.entityToDto(user.get());
-        } else throw new RuntimeException("Hata");
+        } else throw new UserNotFoundException(UserExceptionTypes.USER_NOT_FOUND_USERNAME.getValue() + username);
     }
 
     @Override
     public UserResponse saveUser(UserCreateRequest userCreateRequest) {
-        User user = UserMapper.MAP.dtoToUser(userCreateRequest);
-        userEntityService.save(user);
-        return UserMapper.MAP.entityToDto(user);
+        User user;
+        try {
+            user = UserMapper.MAP.dtoToUser(userCreateRequest);
+            user.setPassword(this.passwordEncoder.encode(user.getPassword()));
+            userEntityService.save(user);
+            return UserMapper.MAP.entityToDto(user);
+        } catch (Exception exception) {
+            throw new UserNotCreatedException(UserExceptionTypes.USER_NOT_CREATED.getValue());
+        }
     }
 
     @Override
@@ -67,16 +82,15 @@ public class UserServiceImpl implements IUserService {
             UserMapper.MAP.dtoToUser(userUpdateRequest);
             userEntityService.save(user.get());
             return UserMapper.MAP.entityToDto(user.get());
-        } else throw new RuntimeException("");
+        } else throw new UserNotUpdatedException(UserExceptionTypes.USER_NOT_UPDATED.getValue());
     }
 
     @Override
     public void deleteUserById(Long id) {
-        Optional<User> user = userEntityService.findById(id);
+        User user = userEntityService.findById(id).orElseThrow(
+                () -> new UserNotDeletedException(UserExceptionTypes.USER_NOT_DELETED.getValue()));
 
-        if (user.isPresent()) {
-            userEntityService.delete(id);
+            userEntityService.delete(user.getId());
             log.info("User deleted with by id : {}", id);
-        } else throw new RuntimeException("User not deleted with id :" + id);
     }
 }

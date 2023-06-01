@@ -19,6 +19,7 @@ public class User extends BaseEntity{
     @Column(name = "id")
     private Long id;
 
+    @NotEmpty
     @Size(min = 3, message = "akbank.firstname.size.message")
     @Column(name = "first_name", nullable = false)
     private String firstName;

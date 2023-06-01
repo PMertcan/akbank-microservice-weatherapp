@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @Slf4j
 @ResponseStatus(HttpStatus.BAD_REQUEST)
-public class UserNotUpdatedException extends BaseException {
-    public UserNotUpdatedException(String message) {
+public class UserNotDeletedException extends BaseException {
+    public UserNotDeletedException(String message) {
         super(message);
-        log.error("[UserNotUpdatedException] -> message : {}", message);
+        log.error("[UserNotDeletedException] -> message : {}", message);
     }
 }
