@@ -1,6 +1,4 @@
 
-{
-Kweather-service/src/main/java/com/akbank/weatherservice/entity/Weather.java,7/d/7d42e2cc6df45bb7684bd9258c3f0cc8d9001e26
 ‡
 Wcity-service/src/main/java/com/akbank/cityservice/exceptions/CityNotFoundException.java,8/d/8d5e98019ebeb5f5ba3975d42d8b7eca75cdcc25
 ‰
@@ -19,22 +17,12 @@ D
 Xuser-service/src/main/java/com/akbank/userservice/servicelayer/service/IUserService.java,b/3/b338bdb73e0e12100f15acbed99964fe2a4b5c02
 †
 Vweather-service/src/main/java/com/akbank/weatherservice/WeatherServiceApplication.java,0/9/095a861e32a5fa006d2c03994da9842095e6ca50
-}
-Mcity-service/src/main/java/com/akbank/cityservice/CityServiceApplication.java,e/0/e046c95f67f9381523df6a49621a36685f6e6599
 r
 Bcity-service/src/main/java/com/akbank/cityservice/entity/City.java,5/7/57cb356b3d6fb4b999e25a13f7eb3f46e7c6d5bd
-„
-Tweather-service/src/main/java/com/akbank/weatherservice/service/IWeatherService.java,4/a/4a317fb369954b82630e09e9e33be86f7afd2af3
-‚
-Rweather-service/src/main/java/com/akbank/weatherservice/service/WeatherClient.java,5/4/5432d0db0ed6d6d99c74de3df254f190ee6081ee
 ‚
 Rcity-service/src/test/java/com/akbank/cityservice/CityServiceApplicationTests.java,1/5/15866aa24bba521e411303217069ab1d4382495a
-„
-Tweather-service/src/main/java/com/akbank/weatherservice/dto/response/WeatherDto.java,7/0/70d45f5153d6f3e64c69050c578cc84fccf33f7f
 z
 Jcity-service/src/main/java/com/akbank/cityservice/dao/ICityRepository.java,9/c/9cd6db0b878dd6c86f0b7c922e45193b533bd413
-Œ
-\weather-service/src/main/java/com/akbank/weatherservice/service/impl/WeatherServiceImpl.java,9/5/95ca161bb981bb42dbf4edad56ffd58d068e12db
 ‚
 Rcity-service/src/main/java/com/akbank/cityservice/dto/response/ClientResponse.java,e/a/eac547108b69de2d437e9b2525337a1050cd9f6f
 ˆ
@@ -45,8 +33,6 @@ Ncity-service/src/main/java/com/akbank/cityservice/servicelayer/UserClient.java
 Qcity-service/src/main/java/com/akbank/cityservice/servicelayer/WeatherClient.java,1/1/112a9dd9edcc2250e936fe0da909b4d5cf9db980
 „
 Tcity-service/src/main/java/com/akbank/cityservice/dto/request/CityCreateRequest.java,2/8/287b4ae00548deb26ebbad63fc60f98286ab6fb3
-ˆ
-Xcity-service/src/main/java/com/akbank/cityservice/servicelayer/impl/CityServiceImpl.java,d/e/deb98ad8b640d1b54ba9668a6c84b0047ae22d84
 x
 Hcity-service/src/main/java/com/akbank/cityservice/mapper/CityMapper.java,2/b/2b6cc86c6f4947324a2cf610530648814561cf4c
 €
@@ -65,8 +51,6 @@ r
 Buser-service/src/main/java/com/akbank/userservice/entity/User.java,6/5/65ba4d8d73e91301ce417a06384cded84e3f25eb
 z
 Juser-service/src/main/java/com/akbank/userservice/dao/IUserRepository.java,8/b/8b2f6511984c5ab5977855e9f3a2a9247192716f
-ˆ
-Xuser-service/src/main/java/com/akbank/userservice/servicelayer/impl/UserServiceImpl.java,f/3/f3ce17f4617e3b25411ff064d8901fa8846938f0
 ‘
 auser-service/src/main/java/com/akbank/userservice/exception/exceptions/UserNotFoundException.java,1/f/1fa92ba18ddcd00df4a194b46f1d81df38190873
 “
@@ -77,7 +61,5 @@ Puser-service/src/main/java/com/akbank/userservice/dto/response/UserResponse.jav
 cuser-service/src/main/java/com/akbank/userservice/exception/exceptions/UserNotUpdatedException.java,8/7/87a71f30a4ee05da740094e420a1b2c1c5f9712a
 Š
 Zuser-service/src/main/java/com/akbank/userservice/configuration/SecurityConfiguration.java,6/a/6a3022c62dd56fb3656844f2b0c369645b5d3085
-€
-Puser-service/src/main/java/com/akbank/userservice/controller/UserController.java,9/0/90a0cef6d0bb11779b398529b377a9b701e0dd79
 €
 Pcity-service/src/main/java/com/akbank/cityservice/controller/CityController.java,8/6/863127025d70939fd614b2c4a7a6d67622b52443
