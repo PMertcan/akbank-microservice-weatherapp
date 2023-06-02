@@ -2,15 +2,14 @@ package com.akbank.cityservice.servicelayer.impl;
 
 import com.akbank.cityservice.dao.ICityRepository;
 import com.akbank.cityservice.dto.request.CityCreateRequest;
-import com.akbank.cityservice.dto.response.CityResponse;
-import com.akbank.cityservice.dto.response.CityWeatherResponse;
-import com.akbank.cityservice.dto.response.ClientResponse;
+import com.akbank.cityservice.dto.response.*;
 import com.akbank.cityservice.entity.City;
+import com.akbank.cityservice.exception.enums.CityExceptionTypes;
+import com.akbank.cityservice.exception.exceptions.*;
 import com.akbank.cityservice.mapper.CityMapper;
-import com.akbank.cityservice.servicelayer.UserClient;
-import com.akbank.cityservice.servicelayer.WeatherClient;
+import com.akbank.cityservice.servicelayer.*;
 import com.akbank.cityservice.servicelayer.service.ICityService;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -35,7 +34,7 @@ public class CityServiceImpl implements ICityService {
         List<CityResponse> citiesResponse = CityMapper.MAP.entityListToDtoList(cities);
 
         if (!citiesResponse.isEmpty()) return citiesResponse;
-        else throw new RuntimeException("Hata !");
+        else throw new CityNotFoundException(CityExceptionTypes.CITIES_NOT_FOUND_EXCEPTION.getValue() + username);
     }
 
     @Override
@@ -51,7 +50,7 @@ public class CityServiceImpl implements ICityService {
 
             return CityMapper.MAP.entityToDto(city);
 
-        } else throw new RuntimeException("Exc");
+        } else throw new CityNotCreatedException(CityExceptionTypes.CITY_NOT_CREATED_EXCEPTION.getValue() + username);
     }
 
     @Override
@@ -65,12 +64,15 @@ public class CityServiceImpl implements ICityService {
 
             CityWeatherResponse cityWeatherResponse = weatherClient.getCityWithWeather(cityResponse.cityName());
 
-            return ClientResponse.builder()
-                    .cityResponse(cityResponse)
-                    .cityWeatherResponse(cityWeatherResponse)
-                    .build();
+            return clientResponseParser(cityResponse, cityWeatherResponse);
 
-        } else throw new RuntimeException("Hata");
+        } else throw new CityNotFoundException(CityExceptionTypes.CITY_NOT_FOUND_EXCEPTION.getValue() + cityName);
     }
 
+    private ClientResponse clientResponseParser(CityResponse cityResponse, CityWeatherResponse cityWeatherResponse) {
+        return ClientResponse.builder()
+                .cityResponse(cityResponse)
+                .cityWeatherResponse(cityWeatherResponse)
+                .build();
+    }
 }
