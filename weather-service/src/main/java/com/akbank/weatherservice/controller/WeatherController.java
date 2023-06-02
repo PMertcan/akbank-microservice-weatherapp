@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/api/weather")
+@RequestMapping(value = "/api/weathers")
 @Slf4j
 public class WeatherController {
 

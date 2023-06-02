@@ -12,7 +12,6 @@
         <module name="weather-service" />
         <module name="city-service" />
         <module name="service-registry" />
-        <module name="role-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
