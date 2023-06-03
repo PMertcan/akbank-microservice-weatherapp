@@ -9,6 +9,6 @@ public interface WeatherClient {
 
     @GetMapping
     public WeatherResponse getWeather(@RequestParam String q,
-                                                      @RequestParam String appid);
+                                      @RequestParam String appid);
 
 }

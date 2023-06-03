@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.*;
 @FeignClient(name = "WEATHER-SERVICE")
 public interface WeatherClient {
 
-    @GetMapping(value = "/api/weather/{city}")
+    @GetMapping(value = "/api/weathers/{city}")
     CityWeatherResponse getCityWithWeather(@PathVariable String city);
 }
