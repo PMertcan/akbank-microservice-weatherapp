@@ -1,8 +1,0 @@
-
-m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΪΗ«Ε8μπώ…1
-l
-java:S1128"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(μψ›8”Γ†‘‡1
-b
-java:S1128"@Remove this unused import 'org.springframework.http.HttpStatus'.(ν¤ϊÿÿÿÿ8”Γ†‘‡1
-a
-java:S1128"DRemove this unused import 'org.springframework.http.HttpStatusCode'.(®ε™Υ8”Γ†‘‡1
