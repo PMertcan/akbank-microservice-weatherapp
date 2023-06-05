@@ -34,15 +34,15 @@ public class UserController {
        return ResponseEntity.ok(user);
     }
 
-    @PutMapping(value = "/{userId}")
-    public ResponseEntity<UserResponse> updateUser(@PathVariable Long userId,
+    @PutMapping(value = "/{username}")
+    public ResponseEntity<UserResponse> updateUser(@PathVariable String username,
                                                    @Valid @RequestBody UserUpdateRequest userUpdateRequest) {
-        var updatedUser = this.userService.updateUserById(userId, userUpdateRequest);
+        var updatedUser = this.userService.updateUserByUsername(username, userUpdateRequest);
         return ResponseEntity.ok(updatedUser);
     }
 
-    @DeleteMapping(value = "/{userId}")
-    public void deleteUser(@PathVariable Long userId) {
-        this.userService.deleteUserById(userId);
+    @DeleteMapping(value = "/{username}")
+    public void deleteUser(@PathVariable String username) {
+        this.userService.deleteUserByUsername(username);
     }
 }

@@ -15,9 +15,9 @@ public interface IUserService {
 
     UserResponse saveUser(UserCreateRequest userCreateRequest);
 
-    UserResponse updateUserById(Long id, UserUpdateRequest userUpdateRequest);
+    UserResponse updateUserByUsername(String username, UserUpdateRequest userUpdateRequest);
 
-    void deleteUserById(Long id);
+    void deleteUserByUsername(String username);
 
 
 

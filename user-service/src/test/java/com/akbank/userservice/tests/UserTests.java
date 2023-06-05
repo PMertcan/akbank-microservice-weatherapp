@@ -70,7 +70,7 @@ class UserTests {
         UserPojo requestUser = UserPojo.builder()
                 .firstName(firstName)
                 .lastName(lastName)
-                .userName("mertcan")
+                .userName("mertcantest")
                 .password(password)
                 .build();
 
@@ -86,7 +86,7 @@ class UserTests {
     @Test
     @Order(5)
     void deleteUserByUsernameTest() {
-        Response response = UsersApiRequests.deleteUserByUsername(username);
+        Response response = UsersApiRequests.deleteUserByUsername("mertcantest");
 
         assertThat(response.getStatusCode(), equalTo(HttpStatus.OK.value()));
     }

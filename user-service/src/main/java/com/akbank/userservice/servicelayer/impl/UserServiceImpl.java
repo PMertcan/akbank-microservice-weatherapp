@@ -69,6 +69,7 @@ public class UserServiceImpl implements IUserService {
             user = UserMapper.MAP.dtoToUser(userCreateRequest);
             user.setPassword(this.passwordEncoder.encode(user.getPassword()));
             userEntityService.save(user);
+            log.info("User Is Created Successfully With Credentials -> {}", user);
             return UserMapper.MAP.entityToDto(user);
         } catch (Exception exception) {
             throw new UserNotCreatedException(UserExceptionTypes.USER_NOT_CREATED.getValue());
@@ -76,21 +77,25 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public UserResponse updateUserById(Long id, UserUpdateRequest userUpdateRequest) {
-        Optional<User> user = userEntityService.findById(id);
-        if (user.isPresent()) {
-            UserMapper.MAP.dtoToUser(userUpdateRequest);
-            userEntityService.save(user.get());
-            return UserMapper.MAP.entityToDto(user.get());
+    public UserResponse updateUserByUsername(String username, UserUpdateRequest userUpdateRequest) {
+        Optional<User> validUser = Optional.ofNullable(userRepository.findUserByUserName(username).orElseThrow(
+                () -> new UserNotFoundException("User Not Found With Username : " + username)
+        ));
+
+        if (validUser.isPresent()) {
+            User user = validUser.get();
+            UserMapper.MAP.updateDtoToUser(userUpdateRequest, user);
+            userEntityService.save(user);
+            return UserMapper.MAP.entityToDto(user);
         } else throw new UserNotUpdatedException(UserExceptionTypes.USER_NOT_UPDATED.getValue());
     }
 
     @Override
-    public void deleteUserById(Long id) {
-        User user = userEntityService.findById(id).orElseThrow(
+    public void deleteUserByUsername(String username) {
+        User user = userRepository.findUserByUserName(username).orElseThrow(
                 () -> new UserNotDeletedException(UserExceptionTypes.USER_NOT_DELETED.getValue()));
 
             userEntityService.delete(user.getId());
-            log.info("User deleted with by id : {}", id);
+            log.info("User deleted with by username : {}", user);
     }
 }
