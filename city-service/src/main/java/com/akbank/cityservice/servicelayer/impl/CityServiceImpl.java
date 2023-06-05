@@ -40,17 +40,15 @@ public class CityServiceImpl implements ICityService {
     @Override
     public CityResponse saveCityByUsername(CityCreateRequest cityCreateRequest) {
 
-        Optional<City> username = userClient.getUsername(cityCreateRequest.username());
-
-        if (username.isPresent()) {
+        try {
+            userClient.getUsername(cityCreateRequest.username());
+        }catch (Exception exception) {
+            throw new CityNotCreatedException(CityExceptionTypes.CITY_NOT_CREATED_EXCEPTION.getValue() + cityCreateRequest.username());
+        }
 
             City city = CityMapper.MAP.dtoToEntity(cityCreateRequest);
-
             cityRepository.save(city);
-
             return CityMapper.MAP.entityToDto(city);
-
-        } else throw new CityNotCreatedException(CityExceptionTypes.CITY_NOT_CREATED_EXCEPTION.getValue() + username);
     }
 
     @Override
