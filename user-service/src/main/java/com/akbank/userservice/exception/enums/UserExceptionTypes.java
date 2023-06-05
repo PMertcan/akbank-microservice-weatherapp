@@ -6,8 +6,8 @@ public enum UserExceptionTypes implements IUserExceptionTypes {
     USER_NOT_FOUND_ID("User Not Found With Id : "),
     USER_NOT_FOUND_USERNAME("User Not Found With Username : "),
     USER_NOT_CREATED("User Not Created !"),
-    USER_NOT_UPDATED("User Not Updated With Id : "),
-    USER_NOT_DELETED("User Not Deleted With Id : ");
+    USER_NOT_UPDATED("User Not Updated With Username : "),
+    USER_NOT_DELETED("User Not Deleted With Username : ");
 
     private final String value;
 

@@ -79,7 +79,7 @@ public class UserServiceImpl implements IUserService {
     @Override
     public UserResponse updateUserByUsername(String username, UserUpdateRequest userUpdateRequest) {
         Optional<User> validUser = Optional.ofNullable(userRepository.findUserByUserName(username).orElseThrow(
-                () -> new UserNotFoundException("User Not Found With Username : " + username)
+                () -> new UserNotFoundException(UserExceptionTypes.USER_NOT_FOUND_USERNAME.getValue() + username)
         ));
 
         if (validUser.isPresent()) {
@@ -87,13 +87,13 @@ public class UserServiceImpl implements IUserService {
             UserMapper.MAP.updateDtoToUser(userUpdateRequest, user);
             userEntityService.save(user);
             return UserMapper.MAP.entityToDto(user);
-        } else throw new UserNotUpdatedException(UserExceptionTypes.USER_NOT_UPDATED.getValue());
+        } else throw new UserNotUpdatedException(UserExceptionTypes.USER_NOT_UPDATED.getValue() + username);
     }
 
     @Override
     public void deleteUserByUsername(String username) {
         User user = userRepository.findUserByUserName(username).orElseThrow(
-                () -> new UserNotDeletedException(UserExceptionTypes.USER_NOT_DELETED.getValue()));
+                () -> new UserNotDeletedException(UserExceptionTypes.USER_NOT_DELETED.getValue() + username));
 
             userEntityService.delete(user.getId());
             log.info("User deleted with by username : {}", user);

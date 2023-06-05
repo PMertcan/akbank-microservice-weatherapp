@@ -81,8 +81,6 @@ w
 G.idea/sonarlint/issuestore/6/5/65ba4d8d73e91301ce417a06384cded84e3f25eb,c/3/c3d4fb1a2b5ee0aec9bab4befef6d015ac8ad0d1
 w
 G.idea/sonarlint/issuestore/6/a/6a3022c62dd56fb3656844f2b0c369645b5d3085,d/6/d6cb3fa029ebe6b13e7147c2d54037099c77f6dc
-‰
-Yuser-service/src/main/java/com/akbank/userservice/exception/enums/UserExceptionTypes.java,9/0/90989995f6a701ced8a3019c4c631df22f19d420
 w
 G.idea/sonarlint/issuestore/1/f/1fa92ba18ddcd00df4a194b46f1d81df38190873,5/9/5933776aa94f1bf3974fa795b8bdeb71c48351cc
 w

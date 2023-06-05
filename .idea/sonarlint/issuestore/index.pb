@@ -105,8 +105,6 @@ Zcity-service/src/main/java/com/akbank/cityservice/exception/enums/ICityExceptio
 ccity-service/src/main/java/com/akbank/cityservice/exception/exceptions/CityNotCreatedException.java,e/0/e09332ea82638da84d65d4563483cffc1a3f08de
 Š
 Zuser-service/src/main/java/com/akbank/userservice/exception/enums/IUserExceptionTypes.java,9/8/9882c460def49392edd7c0c4e332d49f089fe164
-‰
-Yuser-service/src/main/java/com/akbank/userservice/exception/enums/UserExceptionTypes.java,9/0/90989995f6a701ced8a3019c4c631df22f19d420
 Ž
 ^city-service/src/main/java/com/akbank/cityservice/exception/handler/CityExceptionsHandler.java,c/5/c5a5dd7c962d31a9185419afd2957a853f7b775b
 ‘
