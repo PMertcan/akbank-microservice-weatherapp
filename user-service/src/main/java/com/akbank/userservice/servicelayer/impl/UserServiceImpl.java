@@ -79,23 +79,29 @@ public class UserServiceImpl implements IUserService {
     @Override
     public UserResponse updateUserByUsername(String username, UserUpdateRequest userUpdateRequest) {
         Optional<User> validUser = Optional.ofNullable(userRepository.findUserByUserName(username).orElseThrow(
-                () -> new UserNotFoundException(UserExceptionTypes.USER_NOT_FOUND_USERNAME.getValue() + username)
-        ));
+                () -> new UserNotFoundException(UserExceptionTypes.USER_NOT_FOUND_USERNAME.getValue() + username))
+        );
 
         if (validUser.isPresent()) {
             User user = validUser.get();
             UserMapper.MAP.updateDtoToUser(userUpdateRequest, user);
             userEntityService.save(user);
+            log.info("User Is Updated Successfully With Credentials -> {}", user);
             return UserMapper.MAP.entityToDto(user);
-        } else throw new UserNotUpdatedException(UserExceptionTypes.USER_NOT_UPDATED.getValue() + username);
+        } else throw new UserNotUpdatedException(UserExceptionTypes.USER_NOT_UPDATED.getValue() + userUpdateRequest.userName());
     }
 
     @Override
     public void deleteUserByUsername(String username) {
         User user = userRepository.findUserByUserName(username).orElseThrow(
-                () -> new UserNotDeletedException(UserExceptionTypes.USER_NOT_DELETED.getValue() + username));
+                () -> new UserNotFoundException(UserExceptionTypes.USER_NOT_FOUND_USERNAME.getValue() + username)
+        );
 
+        try{
             userEntityService.delete(user.getId());
-            log.info("User deleted with by username : {}", user);
+            log.info("User Deleted With By Username : {}", user);
+        }catch (Exception exception) {
+            throw new UserNotDeletedException(UserExceptionTypes.USER_NOT_DELETED.getValue());
+        }
     }
 }

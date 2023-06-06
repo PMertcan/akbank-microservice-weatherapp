@@ -1,7 +1,5 @@
 package com.akbank.cityservice.entity;
 
-
-import com.akbank.core.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
