@@ -1,6 +1,7 @@
 package com.akbank.cityservice.controller;
 
 import com.akbank.cityservice.dto.request.CityCreateRequest;
+import com.akbank.cityservice.dto.response.CitiesResponse;
 import com.akbank.cityservice.dto.response.CityResponse;
 import com.akbank.cityservice.dto.response.ClientResponse;
 import com.akbank.cityservice.servicelayer.service.ICityService;
@@ -18,7 +19,7 @@ public class CityController {
     private final ICityService cityService;
 
     @GetMapping(value = "/{username}")
-    public ResponseEntity<List<CityResponse>> getAllCities(@PathVariable String username) {
+    public ResponseEntity<CitiesResponse> getAllCities(@PathVariable String username) {
         var cities = cityService.getAllCitiesWithUsername(username);
         return ResponseEntity.ok(cities);
     }

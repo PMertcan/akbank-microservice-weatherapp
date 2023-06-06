@@ -5,12 +5,8 @@ e
 5api-gateway/src/main/resources/application.properties,0/b/0b6d99d0109c62201994669fb4a3c9d49c861cbd
 Ü
 Vweather-service/src/main/java/com/akbank/weatherservice/WeatherServiceApplication.java,0/9/095a861e32a5fa006d2c03994da9842095e6ca50
-à
-Xcity-service/src/main/java/com/akbank/cityservice/servicelayer/service/ICityService.java,b/0/b08a32d83ee7b85d960fb33f36b41cd838831952
 ì
 cuser-service/src/main/java/com/akbank/userservice/exception/exceptions/UserNotUpdatedException.java,8/7/87a71f30a4ee05da740094e420a1b2c1c5f9712a
-Ä
-Pcity-service/src/main/java/com/akbank/cityservice/controller/CityController.java,8/6/863127025d70939fd614b2c4a7a6d67622b52443
 Ü
 Vservice-registry/src/main/java/com/weg/serviceregistry/ServiceRegistryApplication.java,8/b/8b2a03d05e1d85ce2b56a8021c972ed18d4e01c3
 D
@@ -19,8 +15,6 @@ w
 Gapi-gateway/src/main/java/com/weg/apigateway/ApiGatewayApplication.java,9/c/9cfabf8914e5de190faca4716c0eaf6df14aefc0
 É
 Scity-service/src/main/java/com/akbank/cityservice/exception/base/BaseException.java,a/e/ae25080f3971de32697c8a4b326b4bf0811f263a
-â
-Ycity-service/src/main/java/com/akbank/cityservice/dto/response/CityExceptionResponse.java,8/0/80eef0233ac95f6fa7cb7a213a001a15b2340242
 Å
 Q.idea/sonarlint/securityhotspotstore/6/a/6a3022c62dd56fb3656844f2b0c369645b5d3085,8/5/857d9dd47d894ffc0eecb5104f27a7d8421d73c3
 C
@@ -265,8 +259,6 @@ Wweather-service/src/test/java/com/akbank/weatherservice/builder/WeatherApiReque
 Uweather-service/src/test/java/com/akbank/weatherservice/builder/WeatherTestBuild.java,e/1/e1b936d63885d59d62f919f6b3fae0bcff9c069d
 G
 weather-service/pom.xml,8/d/8d62ae9a942e94c1b548c8d881129fc586606105
-z
-Jcity-service/src/main/java/com/akbank/cityservice/dao/ICityRepository.java,9/c/9cd6db0b878dd6c86f0b7c922e45193b533bd413
 x
 Hcity-service/src/main/java/com/akbank/cityservice/mapper/CityMapper.java,2/b/2b6cc86c6f4947324a2cf610530648814561cf4c
 â
@@ -327,8 +319,6 @@ Tcity-service/src/main/java/com/akbank/cityservice/dto/request/CityCreateRequest
 Puser-service/src/main/java/com/akbank/userservice/dto/response/UserResponse.java,b/9/b9f5b6ee27e7aa7693e38d200acd1de9f20804e4
 Ç
 Rcity-service/src/main/java/com/akbank/cityservice/dto/response/ClientResponse.java,e/a/eac547108b69de2d437e9b2525337a1050cd9f6f
-Ä
-Pcity-service/src/main/java/com/akbank/cityservice/dto/response/CityResponse.java,c/1/c16116d4a8e7724033196dbe14c76a4d031f98ce
 á
 Wcity-service/src/main/java/com/akbank/cityservice/dto/response/CityWeatherResponse.java,a/f/af0d678f74ddef08a214ebbe589af4cc52623a6c
 ë
@@ -343,5 +333,3 @@ D
 Puser-service/src/test/java/com/akbank/userservice/builder/UserResponseClass.java,4/3/432f3df9c305eebea7e0ed434e6b577faf6bf38f
 
 Ouser-service/src/test/java/com/akbank/userservice/builder/UsersApiRequests.java,0/4/049c8115ca0fe4cf0646a51c1c919ac1331e5424
-à
-Xcity-service/src/main/java/com/akbank/cityservice/servicelayer/impl/CityServiceImpl.java,d/e/deb98ad8b640d1b54ba9668a6c84b0047ae22d84

@@ -12,6 +12,9 @@ import com.akbank.cityservice.servicelayer.service.ICityService;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,13 +30,21 @@ public class CityServiceImpl implements ICityService {
     private final WeatherClient weatherClient;
 
     @Override
-    public List<CityResponse> getAllCitiesWithUsername(String username) {
+    public CitiesResponse getAllCitiesWithUsername(String username) {
 
         List<City> cities = cityRepository.findCitiesByUsername(username);
+        List<String> cityList = new ArrayList<>();
 
-        List<CityResponse> citiesResponse = CityMapper.MAP.entityListToDtoList(cities);
+        for (City city : cities) {
+            cityList.add(city.getCityName());
+        }
 
-        if (!citiesResponse.isEmpty()) return citiesResponse;
+        CitiesResponse citiesResponse = CitiesResponse.builder()
+                .username(username)
+                .cityNames(cityList)
+                .build();
+
+        if (citiesResponse != null) return citiesResponse;
         else throw new CityNotFoundException(CityExceptionTypes.CITIES_NOT_FOUND_EXCEPTION.getValue() + username);
     }
 
