@@ -1,6 +1,5 @@
 package com.akbank.userservice.servicelayer.impl;
 
-import com.akbank.userservice.configuration.SecurityConfiguration;
 import com.akbank.userservice.dao.IUserRepository;
 import com.akbank.userservice.entity.User;
 import com.akbank.userservice.dto.request.UserCreateRequest;
@@ -85,6 +84,7 @@ public class UserServiceImpl implements IUserService {
         if (validUser.isPresent()) {
             User user = validUser.get();
             UserMapper.MAP.updateDtoToUser(userUpdateRequest, user);
+            user.setPassword(this.passwordEncoder.encode(userUpdateRequest.password()));
             userEntityService.save(user);
             log.info("User Is Updated Successfully With Credentials -> {}", user);
             return UserMapper.MAP.entityToDto(user);
