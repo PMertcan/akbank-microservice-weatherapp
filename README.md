@@ -1,3 +1,4 @@
-# akbank-microservice-weatherapp
-Added the 3 services for the Akbank Projects
-TODO : Readme yazılacak.
+# Weather App Microservice Project
+## Project Architecture
+![weatherapp-archtitecture](https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/11e0c405-9583-416a-a7da-92955f700e9e)
+
