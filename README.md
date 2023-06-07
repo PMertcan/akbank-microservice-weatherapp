@@ -37,7 +37,8 @@ Proje kapsamında 3 adet mikroservis yazılmıştır.
 
 - Kendi Controller'ında aldığı şehir ismiyle , OpenWeatherAPI'sine istek atar ve o şehre ati 5 günlük 3'er saatlik hava durumunu görüntüleyebilir.
 
-<img width="1415" alt="image" src="https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/378d9c5e-acea-4b8b-a2fe-95df0e7a9b4d">
+<img width="1415" alt="image" src="https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/ca6819e6-e39f-424f-a9d7-0613a3578081">
+
 
 
 
