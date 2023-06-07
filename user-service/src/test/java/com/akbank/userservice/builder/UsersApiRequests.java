@@ -15,7 +15,7 @@ public class UsersApiRequests {
     }
 
     public static Response getUserByUsername(String username) {
-        return UserResponseClass.getAllUsers(UsersPath.BASE_ENDPOINT + "/" + username);
+        return UserResponseClass.getUser(UsersPath.BASE_ENDPOINT + "/" + username);
     }
 
     public static Response updateUserByUsername(String username, UserPojo userUpdateRequest) {

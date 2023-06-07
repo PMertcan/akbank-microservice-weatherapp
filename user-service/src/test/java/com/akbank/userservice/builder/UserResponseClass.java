@@ -7,12 +7,12 @@ import static io.restassured.RestAssured.given;
 public class UserResponseClass {
 
     public static Response createUser(String path, UserPojo userCreateRequest) {
-        return given(TestBuild.getRequestSpec())
+        return given(UserTestBuild.getRequestSpec())
                 .body(userCreateRequest)
                 .when()
                 .post(path)
                 .then()
-                .spec(TestBuild.getResponseSpec())
+                .spec(UserTestBuild.getResponseSpec())
                 .extract()
                 .response();
     }
@@ -26,18 +26,18 @@ public class UserResponseClass {
     }
 
     public static Response updateUser(String path, UserPojo userUpdateRequest) {
-        return given(TestBuild.getRequestSpec())
+        return given(UserTestBuild.getRequestSpec())
                 .body(userUpdateRequest)
                 .when()
                 .put(path)
                 .then()
-                .spec(TestBuild.getResponseSpec())
+                .spec(UserTestBuild.getResponseSpec())
                 .extract()
                 .response();
     }
 
     public static Response deleteUser(String path) {
-        return given(TestBuild.getRequestSpec())
+        return given(UserTestBuild.getRequestSpec())
                 .when()
                 .delete(path)
                 .then()
@@ -46,11 +46,11 @@ public class UserResponseClass {
     }
 
     private static Response getRequestMethod(String path) {
-        return given(TestBuild.getRequestSpec())
+        return given(UserTestBuild.getRequestSpec())
                 .when()
                 .get(path)
                 .then()
-                .spec(TestBuild.getResponseSpec())
+                .spec(UserTestBuild.getResponseSpec())
                 .extract()
                 .response();
     }

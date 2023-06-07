@@ -8,7 +8,7 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
-public class TestBuild {
+public class UserTestBuild {
 
     public static RequestSpecification getRequestSpec(){
         return new RequestSpecBuilder().
