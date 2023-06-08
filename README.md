@@ -57,7 +57,7 @@ Proje kapsamında 3 adet mikroservis yazılmıştır.
 <img width="1148" alt="image" src="https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/ba9111e6-ece8-459d-bfcb-2158bce024ba">
 
 ### Asenkron İletişim (Kafka)
-Weather Servisine bir istek atıldığı zaman , Weather Servisi , City Servisine istenilen şehrin datalarını quequ şeklinde iletebiliyor.
+Weather Servisine bir istek atıldığı zaman , Weather Servisi , City Servisine istenilen şehrin datalarını Queue şeklinde iletebiliyor.
 
 <img width="1677" alt="image" src="https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/e515e045-d188-40e5-af2e-d13c5ff77e23">
 
