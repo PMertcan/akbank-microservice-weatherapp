@@ -21,7 +21,7 @@ public class WeatherServiceImpl implements IWeatherService {
 
     @Override
     public WeatherResponse getWeatherWithCity(String city) {
-        log.info("Got the city {}", city);
+        log.info("Received the City Weather Details -> {}", city);
         return weatherClient.getWeather(city, apiKey);
     }
 }
