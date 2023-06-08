@@ -44,7 +44,10 @@ public class CityServiceImpl implements ICityService {
                 .cityNames(cityList)
                 .build();
 
-        if (citiesResponse != null) return citiesResponse;
+        if (citiesResponse != null) {
+            log.info("Cities Response Not Null.");
+            return citiesResponse;
+        }
         else throw new CityNotFoundException(CityExceptionTypes.CITIES_NOT_FOUND_EXCEPTION.getValue() + username);
     }
 
@@ -54,12 +57,18 @@ public class CityServiceImpl implements ICityService {
         try {
             userClient.getUsername(cityCreateRequest.username());
         }catch (Exception exception) {
-            throw new CityNotCreatedException(CityExceptionTypes.CITY_NOT_CREATED_EXCEPTION.getValue() + cityCreateRequest.username());
+            throw new CityNotFoundException(CityExceptionTypes.CITY_NOT_FOUND_EXCEPTION.getValue() + cityCreateRequest.username());
         }
 
+        try{
             City city = CityMapper.MAP.dtoToEntity(cityCreateRequest);
             cityRepository.save(city);
+            log.info("City Created Successfully.");
             return CityMapper.MAP.entityToDto(city);
+        }catch (Exception exception) {
+            throw new CityNotCreatedException(CityExceptionTypes.CITY_NOT_CREATED_EXCEPTION.getValue());
+        }
+
     }
 
     @Override
@@ -72,7 +81,7 @@ public class CityServiceImpl implements ICityService {
             CityResponse cityResponse = CityMapper.MAP.entityToDto(city.get());
 
             CityWeatherResponse cityWeatherResponse = weatherClient.getCityWithWeather(cityResponse.cityName());
-
+            log.info("Received the City Weather Details");
             return clientResponseParser(cityResponse, cityWeatherResponse);
 
         } else throw new CityNotFoundException(CityExceptionTypes.CITY_NOT_FOUND_EXCEPTION.getValue() + cityName);

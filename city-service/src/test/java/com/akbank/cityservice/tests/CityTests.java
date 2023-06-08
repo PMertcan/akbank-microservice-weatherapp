@@ -61,7 +61,7 @@ class CityTests {
     @Order(3)
     void getCityWeatherDetailsByCityNameTest() {
 
-        Response response = CityApiRequests.getCityWeatherDetailsByCityName("İstanbul");
+        Response response = CityApiRequests.getCityWeatherDetailsByCityName("Paris");
 
         assertThat(response.getStatusCode(), equalTo(HttpStatus.OK.value()));
     }
