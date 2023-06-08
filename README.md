@@ -1,7 +1,7 @@
 # Weather App Microservice Project
 
 ## Project Architecture
-![weatherapp-archtitecture](https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/11e0c405-9583-416a-a7da-92955f700e9e)
+![image](https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/406643c3-057a-4810-9234-4c59ef2dacd9)
 
 ## Project Documentation
 Proje kapsamında 3 adet mikroservis yazılmıştır.
