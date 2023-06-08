@@ -12,10 +12,14 @@ Proje kapsamında 3 adet mikroservis yazılmıştır.
 - Weather Service
 
 ### API Gateway
-- API Gateway bütün servislerden önceki yetkilendirme görevini üstleniyor.
+- API Gateway bütün servislerden önceki yetkilendirme görevini üstleniyor ve buradaki port ile tüm servislere aynı port üzerinden ulaşabiliyorum.
+
+<img width="729" alt="image" src="https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/569cac9c-0283-4b2e-8718-944c291d1142">
+
+<img width="729" alt="image" src="https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/a8839657-eabe-4f2d-a3e0-594c6b051c17">
 
 ### Service Registry
-- Service Registry Eureka Client kullanarak Servisleri tutabilmemizi sağlar , servis iletişimini tek bir yerden yapmamızı sağlar ve load balancer görevi yapar.
+- Service Registry Eureka Client kullanarak Servisleri tutabilmemizi sağlar ve load balancer görevi yapar.
 <img width="1785" alt="image" src="https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/6f0c528c-5eab-40d1-abc1-b30f206ca8fa">
 
 ### User Service
@@ -40,17 +44,17 @@ Proje kapsamında 3 adet mikroservis yazılmıştır.
 
 <img width="1148" alt="image" src="https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/58049bd2-f37e-4a1f-bc52-e2fe97cd814c">
 
-<img width="1148" alt="image" src="https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/fc1ed1e4-2ed3-4d7f-ac80-0e99dc365fc6">
+<img width="1148" alt="image" src="https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/76169454-b64f-4641-8732-9b5aa91387d6">
+
 
 ### Weather Service
 - Weather Servisi OpenWeatherAPI'sini API sağlayıcı olarak kullanır ek olarak kendisinin host ve portuna çevirebilmesini sağlar.
 
 - Kendi Controller'ında aldığı şehir ismiyle , OpenWeatherAPI'sine istek atar ve o şehre ati 5 günlük 3'er saatlik hava durumunu görüntüleyebilir.
 
-<img width="1415" alt="image" src="https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/ca6819e6-e39f-424f-a9d7-0613a3578081">
-
 <img width="1148" alt="image" src="https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/94df46a9-78a0-414f-b56b-120abe3caf28">
 
+<img width="1148" alt="image" src="https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/ba9111e6-ece8-459d-bfcb-2158bce024ba">
 
 
 
