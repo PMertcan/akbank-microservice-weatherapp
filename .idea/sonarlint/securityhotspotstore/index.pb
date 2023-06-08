@@ -179,10 +179,6 @@ Lweather-service/src/test/java/com/akbank/weatherservice/datas/DummyData.java,f
 Nweather-service/src/test/java/com/akbank/weatherservice/modal/WeatherPojo.java,b/d/bd4c3ec24b59f10487e973688f7f54ca8125d512
 â
 Yweather-service/src/test/java/com/akbank/weatherservice/builder/WeatherResponseClass.java,f/5/f5e4fc59b71abbce4c98d73a9d325b2f65524ad9
-á
-Wweather-service/src/test/java/com/akbank/weatherservice/builder/WeatherApiRequests.java,5/7/578e03f37533c8cf0db65e3ebdc83f60a914fde4
-Ö
-Uweather-service/src/test/java/com/akbank/weatherservice/builder/WeatherTestBuild.java,e/1/e1b936d63885d59d62f919f6b3fae0bcff9c069d
 â
 Ycity-service/src/main/java/com/akbank/cityservice/exception/enums/CityExceptionTypes.java,5/e/5e291cf2db643bc3335d5a83a46244977f9d0f78
 ä
@@ -229,8 +225,6 @@ z
 Juser-service/src/main/java/com/akbank/userservice/dao/IUserRepository.java,8/b/8b2f6511984c5ab5977855e9f3a2a9247192716f
 v
 Fuser-service/src/test/java/com/akbank/userservice/datas/DummyData.java,4/8/48970f7802ad90beb16ba5ad492b079c0487f149
-
-Oweather-service/src/test/java/com/akbank/weatherservice/tests/WeatherTests.java,e/f/efa73f0e5894d44ec749046f5cb75b91c8022b9d
 à
 Xcity-service/src/main/java/com/akbank/cityservice/servicelayer/service/ICityService.java,b/0/b08a32d83ee7b85d960fb33f36b41cd838831952
 x
@@ -253,8 +247,6 @@ Luser-service/src/test/java/com/akbank/userservice/builder/UserTestBuild.java,3
 aweather-service/src/main/java/com/akbank/weatherservice/servicelayer/apiclient/WeatherClient.java,a/a/aac75b97cf94f962b6fc1195ce5710a630f79960
 â
 Yweather-service/src/main/java/com/akbank/weatherservice/dto/response/WeatherResponse.java,1/0/10b06c11114858b65ea696fe27970ad32576fafd
-ë
-aweather-service/src/main/java/com/akbank/weatherservice/servicelayer/impl/WeatherServiceImpl.java,0/2/0276f8c56090943a5a390f8668e0ed3cd974a03d
 C
 api-gateway/pom.xml,2/b/2bfa2b108f2439e99e004f4085b58c22cf995f73
 w
@@ -299,8 +291,6 @@ Q.idea/sonarlint/securityhotspotstore/b/0/b08a32d83ee7b85d960fb33f36b41cd8388319
 Q.idea/sonarlint/securityhotspotstore/d/b/db9d48d2d9c791666478c63472b327363b0d9f98,f/d/fd6e90533220902e6619c83dd54d30c2bfff911e
 G
 weather-service/pom.xml,8/d/8d62ae9a942e94c1b548c8d881129fc586606105
-â
-Yweather-service/src/main/java/com/akbank/weatherservice/controller/WeatherController.java,9/1/9168253e5a7bbf3b9213c23beef24e85440c1134
 w
 G.idea/sonarlint/issuestore/1/0/10a31c75c5c5efec91ef2520091d0810e350cea3,f/1/f10f6c3c714cedc20ff7234541cc70ec0273c8ea
 Å
@@ -661,5 +651,3 @@ Tuser-service/src/main/java/com/akbank/userservice/dto/request/UserCreateRequest
 Puser-service/src/main/java/com/akbank/userservice/controller/UserController.java,9/0/90a0cef6d0bb11779b398529b377a9b701e0dd79
 à
 Xuser-service/src/main/java/com/akbank/userservice/servicelayer/impl/UserServiceImpl.java,f/3/f3ce17f4617e3b25411ff064d8901fa8846938f0
-Ñ
-Tweather-service/src/main/java/com/akbank/weatherservice/config/KafkaTopicConfig.java,a/9/a95002bacccab2882ca62d0b4551fb2a4805ef67

@@ -177,10 +177,6 @@ Lcity-service/src/test/java/com/akbank/cityservice/builder/CityTestBuild.java,1
 Nweather-service/src/test/java/com/akbank/weatherservice/modal/WeatherPojo.java,b/d/bd4c3ec24b59f10487e973688f7f54ca8125d512
 ‰
 Yweather-service/src/test/java/com/akbank/weatherservice/builder/WeatherResponseClass.java,f/5/f5e4fc59b71abbce4c98d73a9d325b2f65524ad9
-‡
-Wweather-service/src/test/java/com/akbank/weatherservice/builder/WeatherApiRequests.java,5/7/578e03f37533c8cf0db65e3ebdc83f60a914fde4
-…
-Uweather-service/src/test/java/com/akbank/weatherservice/builder/WeatherTestBuild.java,e/1/e1b936d63885d59d62f919f6b3fae0bcff9c069d
 |
 Lweather-service/src/test/java/com/akbank/weatherservice/datas/DummyData.java,f/d/fdb40cd677feac74a77daffe01f301c07d3a035e
 ‰
@@ -229,8 +225,6 @@ z
 Juser-service/src/main/java/com/akbank/userservice/dao/IUserRepository.java,8/b/8b2f6511984c5ab5977855e9f3a2a9247192716f
 v
 Fuser-service/src/test/java/com/akbank/userservice/datas/DummyData.java,4/8/48970f7802ad90beb16ba5ad492b079c0487f149
-
-Oweather-service/src/test/java/com/akbank/weatherservice/tests/WeatherTests.java,e/f/efa73f0e5894d44ec749046f5cb75b91c8022b9d
 ˆ
 Xcity-service/src/main/java/com/akbank/cityservice/servicelayer/service/ICityService.java,b/0/b08a32d83ee7b85d960fb33f36b41cd838831952
 x
@@ -251,8 +245,6 @@ Lapi-gateway/src/test/java/com/weg/apigateway/ApiGatewayApplicationTests.java,a
 Luser-service/src/test/java/com/akbank/userservice/builder/UserTestBuild.java,3/5/3550a65456d62274fc645e3d2659b7892b0536e8
 ‘
 aweather-service/src/main/java/com/akbank/weatherservice/servicelayer/apiclient/WeatherClient.java,a/a/aac75b97cf94f962b6fc1195ce5710a630f79960
-‘
-aweather-service/src/main/java/com/akbank/weatherservice/servicelayer/impl/WeatherServiceImpl.java,0/2/0276f8c56090943a5a390f8668e0ed3cd974a03d
 ‰
 Yweather-service/src/main/java/com/akbank/weatherservice/dto/response/WeatherResponse.java,1/0/10b06c11114858b65ea696fe27970ad32576fafd
 C
@@ -637,8 +629,6 @@ w
 G.idea/sonarlint/issuestore/2/e/2e46e8da976525bb37fb74981190f6a37e146de9,1/c/1c4a4ab10583250c12fd072455011a9f6a4d4ddd
 Ž
 ^user-service/src/main/java/com/akbank/userservice/exception/handler/UserExceptionsHandler.java,9/5/95e849015b418b2593d48c3114c23ac76ef8ec3a
-‰
-Yweather-service/src/main/java/com/akbank/weatherservice/controller/WeatherController.java,9/1/9168253e5a7bbf3b9213c23beef24e85440c1134
 †
 Vweather-service/src/main/java/com/akbank/weatherservice/dto/response/WeatherEvent.java,d/d/ddbd1d0dd15ed41b439987d058881fa284fb5060
 G
@@ -661,5 +651,3 @@ Tuser-service/src/main/java/com/akbank/userservice/dto/request/UserCreateRequest
 Puser-service/src/main/java/com/akbank/userservice/controller/UserController.java,9/0/90a0cef6d0bb11779b398529b377a9b701e0dd79
 ˆ
 Xuser-service/src/main/java/com/akbank/userservice/servicelayer/impl/UserServiceImpl.java,f/3/f3ce17f4617e3b25411ff064d8901fa8846938f0
-„
-Tweather-service/src/main/java/com/akbank/weatherservice/config/KafkaTopicConfig.java,a/9/a95002bacccab2882ca62d0b4551fb2a4805ef67
