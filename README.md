@@ -60,6 +60,7 @@ Weather Servisine bir istek atıldığı zaman , Weather Servisi , City Servisin
 - Maven
 - REST Assured
 - JUnit
+- Kafka
 
 
 
