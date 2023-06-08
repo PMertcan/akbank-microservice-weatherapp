@@ -37,7 +37,7 @@ Proje kapsamında 3 adet mikroservis yazılmıştır.
 
 <img width="1792" alt="image" src="https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/5b64def9-1455-48c6-abd5-37dc5a19ab8f">
 
-<img width="1792" alt="image" src="https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/5b64def9-1455-48c6-abd5-37dc5a19ab8f">
+<img width="1222" alt="image" src="https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/4f7bdb02-9fa0-4e67-87ad-c495be071e65">
 
 
 ### Weather Service
