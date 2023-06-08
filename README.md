@@ -43,7 +43,7 @@ Proje kapsamında 3 adet mikroservis yazılmıştır.
 ### Weather Service
 - Weather Servisi OpenWeatherAPI'sini API sağlayıcı olarak kullanır ek olarak kendisinin host ve portuna çevirebilmesini sağlar.
 
-- Kendi Controller'ında aldığı şehir ismiyle , OpenWeatherAPI'sine istek atar ve o şehre ati 5 günlük 3'er saatlik hava durumunu görüntüleyebilir.
+- Kendi Controller'ında aldığı şehir ismiyle , OpenWeatherAPI'sine istek atar ve o şehre ait 5 günlük 3'er saatlik hava durumunu görüntüleyebilir.
 
 <img width="1222" alt="image" src="https://github.com/PMertcan/akbank-microservice-weatherapp/assets/135176622/60bd74e1-d2a9-4e3c-b89f-6057a6fd5195">
 
